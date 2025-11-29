@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaud - AIが記録する。あなたは思考する。</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        plaud: {
+                            black: '#1a1a1a',
+                            dark: '#333333',
+                            gray: '#f5f5f7',
+                            accent: '#6366f1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* スムーズスクロール */
+        html { scroll-behavior: smooth; }
+        /* フェードインアニメーション用 */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* 画像のフローティング演出 */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans text-plaud-dark antialiased bg-white text-base lg:text-lg">
+
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="text-3xl font-black tracking-tight text-plaud-black">PLAUD</div>
+            <a href="https://px.a8.net/svt/ejp?a8mat=45DQIP+31JTMQ+5J4W+62U35" target="_blank" class="bg-plaud-black text-white px-6 py-3 rounded-full text-base font-bold hover:bg-gray-800 transition shadow-lg transform hover:-translate-y-0.5">
+                購入する
+            </a>
+        </div>
+    </header>
+
+    <section class="relative pt-36 pb-20 lg:pt-52 lg:pb-40 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center">
+            <div class="lg:w-1/2 mt-12 lg:mt-0 z-10 fade-up">
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-black text-plaud-black leading-tight mb-8">
+                    「議事録」は、<br>もうAIに任せればいい。
+                </h1>
+                <p class="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed font-medium">
+                    思考する時間を最大化する、あなたの第2の脳。<br>
+                    録音、文字起こし、要約、マインドマップ作成まで全自動。<br>
+                    <span class="font-bold text-plaud-black">世界100万人が選んだ、Plaudシリーズ。</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://px.a8.net/svt/ejp?a8mat=45DQIP+31JTMQ+5J4W+62U35" target="_blank" class="inline-flex justify-center items-center px-10 py-5 border border-transparent text-xl font-bold rounded-2xl text-white bg-plaud-black hover:bg-gray-800 hover:scale-105 transition duration-300 shadow-xl">
+                        今すぐPlaudのある働き方を始める
+                    </a>
+                </div>
+                <p class="mt-5 text-base text-gray-500 font-medium">※月額費不要のスタータープランあり</p>
+            </div>
+            <div class="lg:w-1/2 w-full relative z-0 flex justify-center">
+                <img src="23.jpg" alt="Plaud Note Pro Device" class="w-3/4 md:w-2/3 lg:w-full max-w-xl object-contain floating drop-shadow-2xl transform -rotate-6">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-plaud-gray">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-up">
+                    <img src="20250907_523.jpg" alt="Business Meeting" class="rounded-3xl shadow-xl w-full object-cover h-72 md:h-auto">
+                </div>
+                <div class="fade-up delay-100">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-plaud-black leading-snug">「書く」ことに必死で、<br>「聞く」ことを疎かにしていませんか？</h2>
+                    <p class="text-lg lg:text-xl text-gray-600 mb-6 leading-relaxed">
+                        クライアントとの重要な商談、社内の定例会議、移動中の急な電話指示。<br>
+                        私たちの毎日は、膨大な「言葉」のやり取りで溢れています。
+                    </p>
+                    <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">
+                        しかし、そのすべてを正確に記録しようとするあまり、目の前の相手の表情を見逃したり、本質的な議論に集中できなかったりした経験はないでしょうか。<br>
+                        会議後の議事録作成時間は、あなたのキャリアにとって本当に生産的な時間と言えるでしょうか。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-28 bg-white text-center">
+        <div class="max-w-5xl mx-auto px-4 fade-up">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-10">メモに追われる時間は、<span class="text-red-500">機会損失</span>です。</h2>
+            <p class="text-xl lg:text-2xl text-gray-600 leading-loose mb-16 font-medium">
+                あなたの価値は、誰よりも早く正確にタイピングすることではありません。<br>
+                情報を分析し、戦略を立て、意思決定を下すことにあるはずです。
+            </p>
+            <div class="grid md:grid-cols-3 gap-10 text-left">
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition bg-white">
+                    <div class="text-4xl mb-4">😰</div>
+                    <h3 class="text-xl font-bold mb-3 text-plaud-black">聞き漏らしへの不安</h3>
+                    <p class="text-base lg:text-lg text-gray-600 leading-relaxed">記録に気を取られ、議論に深く入り込めない。本質的な会話ができない。</p>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition bg-white">
+                    <div class="text-4xl mb-4">⏳</div>
+                    <h3 class="text-xl font-bold mb-3 text-plaud-black">議事録作成の残業</h3>
+                    <p class="text-base lg:text-lg text-gray-600 leading-relaxed">本来やるべき企画書が手付かずのまま夜になる。時間がいくらあっても足りない。</p>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition bg-white">
+                    <div class="text-4xl mb-4">📦</div>
+                    <h3 class="text-xl font-bold mb-3 text-plaud-black">情報のブラックボックス化</h3>
+                    <p class="text-base lg:text-lg text-gray-600 leading-relaxed">「あの時なんて言ったっけ？」がすぐに出てこない。過去の資産が活かせない。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-plaud-gray overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold text-plaud-black mb-6">Plaudがもたらす、4つの解放。</h2>
+                <p class="text-xl text-gray-600">最新テクノロジーが、あなたの仕事を劇的にシンプルにします。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-32 fade-up">
+                <div class="relative">
+                    <div class="flex gap-6">
+                        <img src="20250911_0535.jpg" alt="Pocket Size" class="w-1/2 rounded-2xl shadow-lg object-cover">
+                        <img src="10271722786940_.pic_hd.jpg" alt="Phone Recording" class="w-1/2 rounded-2xl shadow-lg object-cover">
+                    </div>
+                </div>
+                <div>
+                    <span class="text-base font-black text-indigo-600 tracking-widest uppercase mb-2 block">01. RECORDING</span>
+                    <h3 class="text-3xl lg:text-4xl font-bold mt-2 mb-6 leading-tight">起動まで0.1秒。<br>あらゆる会話を逃さない。</h3>
+                    <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-6">
+                        必要なのは、ワンタッチだけ。<br>
+                        対面の会議はもちろん、MagSafeでスマホに貼り付ければ、通話もLINE電話もクリアに録音可能。<br>
+                        胸元にクリップできるウェアラブルモデルなら、会話の始まりすら意識させません。
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-32 fade-up md:flex-row-reverse">
+                <div class="md:order-2 relative">
+                    <img src="1 拷贝 14.jpg" alt="Speaker Identification" class="w-full rounded-2xl shadow-xl border-2 border-white">
+                    <img src="1 拷贝 17.jpg" alt="Multilingual" class="absolute -bottom-12 -left-12 w-1/2 rounded-xl shadow-2xl border-2 border-white hidden lg:block">
+                </div>
+                <div class="md:order-1">
+                    <span class="text-base font-black text-indigo-600 tracking-widest uppercase mb-2 block">02. TRANSCRIPTION</span>
+                    <h3 class="text-3xl lg:text-4xl font-bold mt-2 mb-6 leading-tight">「誰が」話したかまでわかる、<br>驚異の文字起こし。</h3>
+                    <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-6">
+                        Microsoft Azureベースの高度な認識エンジンが、日本語の複雑な文脈も正確にテキスト化。<br>
+                        さらに、声紋識別技術により「誰が発言したか」を自動でタグ付けします。<br>
+                        112か国語に対応し、海外クライアントとのWeb会議でも最強のアシスタントになります。
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-32 fade-up">
+                <div class="relative">
+                    <img src="画板 5.png" alt="Templates" class="w-full rounded-2xl shadow-xl border-2 border-white">
+                    <img src="画板 2.jpg" alt="Analysis" class="absolute -bottom-8 -right-8 w-2/3 rounded-xl shadow-2xl border-2 border-white">
+                </div>
+                <div>
+                    <span class="text-base font-black text-indigo-600 tracking-widest uppercase mb-2 block">03. SUMMARY</span>
+                    <h3 class="text-3xl lg:text-4xl font-bold mt-2 mb-6 leading-tight">3000以上のテンプレートで、<br>要約・整理まで全自動。</h3>
+                    <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-6">
+                        単なる文字起こしではありません。<br>
+                        「議事録」「商談メモ」「面接評価」「ToDoリスト」など、目的に合わせたテンプレートを選ぶだけで、AIが構造化されたレポートを自動生成します。<br>
+                        会議が終わって席に戻る頃には、要点のまとまったドキュメントが完成しています。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center fade-up">
+                <div class="md:order-2">
+                     <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+                        <div class="flex items-start gap-4 mb-6">
+                             <div class="bg-gray-100 p-3 rounded-full text-2xl">👤</div>
+                             <div class="bg-gray-100 p-4 rounded-2xl text-base lg:text-lg font-medium rounded-tl-none">先週の会議でA社が懸念していた点は？</div>
+                        </div>
+                        <div class="flex items-start gap-4 justify-end">
+                            <div class="bg-indigo-600 text-white p-4 rounded-2xl text-base lg:text-lg font-medium rounded-tr-none shadow-md leading-relaxed">
+                                A社の主な懸念点は「初期導入コスト」と「セキュリティ要件への適合」でした。特にクラウド利用時の暗号化について詳細な質問がありました。
+                            </div>
+                            <div class="bg-indigo-600 p-3 rounded-full text-white text-2xl">🤖</div>
+                       </div>
+                     </div>
+                </div>
+                <div class="md:order-1">
+                    <span class="text-base font-black text-indigo-600 tracking-widest uppercase mb-2 block">04. ASK PLAUD</span>
+                    <h3 class="text-3xl lg:text-4xl font-bold mt-2 mb-6 leading-tight">録音データと「対話」する。</h3>
+                    <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-6">
+                        「先週の会議で、A部長が懸念していた予算のリスクは何だっけ？」<br>
+                        そんなときは、AIチャットボット「Ask Plaud」に質問してください。<br>
+                        膨大な音声データの中から、必要な情報を瞬時に抽出して回答します。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-plaud-black text-white">
+        <div class="max-w-5xl mx-auto px-4 text-center fade-up">
+            <h3 class="text-3xl lg:text-4xl font-bold mb-6">世界最先端の知能を、あなたのポケットに。</h3>
+            <p class="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed">
+                GPT-5, Claude 3.7 Sonnet, Gemini 2.5 Pro...<br>
+                Plaudは常に複数のトップティアAIモデルを統合。<br>
+                自分で契約する必要はありません。これ一つで、常に最先端にアクセスできます。
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 opacity-80">
+                <span class="px-6 py-3 border border-gray-600 rounded-full text-lg font-medium">OpenAI GPT-5</span>
+                <span class="px-6 py-3 border border-gray-600 rounded-full text-lg font-medium">Claude 3.7</span>
+                <span class="px-6 py-3 border border-gray-600 rounded-full text-lg font-medium">Gemini 2.5 Pro</span>
+                <span class="px-6 py-3 border border-gray-600 rounded-full text-lg font-medium">And more...</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl lg:text-5xl font-bold text-center mb-20 fade-up">Before / After</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 fade-up">
+                <div class="border border-gray-100 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded font-black">CASE 1</span>
+                        コンサルタント / 営業職
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <p class="text-sm font-bold text-red-600 mb-2 uppercase tracking-wide">Before</p>
+                            <p class="text-base lg:text-lg text-gray-800 leading-relaxed">商談中、PCへの入力に集中しすぎて、相手の微妙な表情の変化を見逃し、本音を引き出せなかった。</p>
+                        </div>
+                        <div class="flex justify-center text-gray-300 text-2xl">▼</div>
+                        <div class="bg-green-50 p-6 rounded-2xl border border-green-100">
+                            <p class="text-sm font-bold text-green-600 mb-2 uppercase tracking-wide">After</p>
+                            <p class="text-lg lg:text-xl text-gray-900 font-bold mb-2">会話に100%集中できるため信頼関係が深化。</p>
+                            <p class="text-base lg:text-lg text-gray-700">商談直後に要約が届き、帰りのタクシーでフォローメール送信完了。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-100 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded font-black">CASE 2</span>
+                        プロジェクトマネージャー
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="bg-red-50 p-6 rounded-2xl">
+                            <p class="text-sm font-bold text-red-600 mb-2 uppercase tracking-wide">Before</p>
+                            <p class="text-base lg:text-lg text-gray-800 leading-relaxed">定例会議のたびに議事録係が指名され、若手社員のリソースが削られていた。共有も遅れがち。</p>
+                        </div>
+                        <div class="flex justify-center text-gray-300 text-2xl">▼</div>
+                        <div class="bg-green-50 p-6 rounded-2xl border border-green-100">
+                            <p class="text-sm font-bold text-green-600 mb-2 uppercase tracking-wide">After</p>
+                            <p class="text-lg lg:text-xl text-gray-900 font-bold mb-2">全員が議論に参加。会議終了と同時にToDoが生成。</p>
+                            <p class="text-base lg:text-lg text-gray-700">決定事項が即座に共有され、実行までのリードタイムが大幅短縮。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-plaud-gray text-center">
+        <div class="max-w-4xl mx-auto px-4 fade-up">
+            <h2 class="text-3xl font-bold mb-10">世界が認めたデザインと信頼</h2>
+            <div class="flex flex-wrap justify-center gap-8 items-center opacity-60 mb-10 grayscale">
+                <div class="font-bold text-lg border-2 px-6 py-3 border-gray-400 rounded">Red Dot Winner 2024</div>
+                <div class="font-bold text-lg border-2 px-6 py-3 border-gray-400 rounded">iF DESIGN AWARD</div>
+                <div class="font-bold text-lg border-2 px-6 py-3 border-gray-400 rounded">GOOD DESIGN AWARD</div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm inline-block text-left max-w-2xl w-full">
+                <ul class="space-y-4 text-lg text-gray-700">
+                    <li class="flex items-center gap-4"><span class="text-green-500 text-xl">✅</span> <strong>世界100万人以上</strong>のユーザーが愛用</li>
+                    <li class="flex items-center gap-4"><span class="text-green-500 text-xl">✅</span> データは暗号化され、Google Cloudで厳重管理</li>
+                    <li class="flex items-center gap-4"><span class="text-green-500 text-xl">✅</span> プライバシー保護機能も万全</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-4 fade-up">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-10">プロフェッショナルのための、<br>合理的な投資。</h2>
+            <div class="bg-gradient-to-br from-indigo-50 to-white border-2 border-indigo-100 p-12 rounded-3xl shadow-md mb-10">
+                <h3 class="text-2xl lg:text-3xl font-bold text-indigo-900 mb-4">月額 0円 から使えるAI機能</h3>
+                <p class="text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed">
+                    スタータープランでも、毎月300分の文字起こしと、<br>
+                    <span class="font-black text-black border-b-4 border-yellow-200">無制限のAI要約・マインドマップ作成が永久に無料</span>です。
+                </p>
+                <div class="text-base lg:text-lg text-gray-600 bg-white p-6 rounded-xl border border-gray-200 inline-block shadow-sm">
+                    <p>💡 残業を月に1時間減らすだけで、十分に元が取れる計算です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-40 bg-gray-900 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="1 拷贝 16.jpg" alt="Background" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-gray-900/50"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center fade-up">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-tight">
+                記録係は卒業して、<br>
+                あなたは「変革」のリーダーへ。
+            </h2>
+            <p class="text-xl lg:text-2xl text-gray-300 mb-12 leading-relaxed">
+                1年後、手作業でメモを取り続けている自分と、<br>
+                すべてをAIに任せて戦略を練っている自分。<br>
+                どちらを選びますか？
+            </p>
+            <a href="https://px.a8.net/svt/ejp?a8mat=45DQIP+31JTMQ+5J4W+62U35" target="_blank" class="inline-block w-full sm:w-auto px-16 py-6 bg-white text-plaud-black font-black text-2xl rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:scale-105 hover:bg-gray-100 transition duration-300">
+                Plaud Noteシリーズを購入する
+            </a>
+            <p class="mt-8 text-base text-gray-400 font-medium">30日間の返金保証付き</p>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-gray-100 text-center text-gray-500 text-base">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-6 font-medium">&copy; 2025 Plaud Inc. All Rights Reserved.</p>
+            <div class="flex justify-center gap-8">
+                <a href="#" class="hover:text-plaud-black hover:underline transition">特定商取引法に基づく表記</a>
+                <a href="#" class="hover:text-plaud-black hover:underline transition">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.fade-up');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
